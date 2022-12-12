@@ -64,3 +64,6 @@ const useRestorableValue = ({ id, initialValue, shouldRestoreOldValue = true }:O
     setValue
   };
 };
+
+export default useRestorableValue;
+
