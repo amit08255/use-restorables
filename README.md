@@ -38,13 +38,13 @@ import useRestorableValue from './useRestorableValue';
 
 function Filter() {
   const { value, setValue, resetValue, restoreValue, applyValue } = useRestorableValue({
-  id: "account-values",
-  shouldRestoreOldValue: true,
-  initialValue: {
-      accountName: "Hello",
-      status: "World"
-  },
-});
+    id: "account-values",
+    shouldRestoreOldValue: true,
+    initialValue: {
+        accountName: "Hello",
+        status: "World"
+    },
+  });
 
   const onChange = (key) => (val) => {
     setValue((value) => ({ ...value, [key]: val }));
