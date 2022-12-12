@@ -37,14 +37,14 @@ import ReactDOM from "react-dom";
 import useRestorableValue from './useRestorableValue';
 
 function Filter() {
-  const { value, setValue, resetValue, restoreValue, applyValue } = useRestorableValue(
-    "account-values",
-    true,
-    {
+  const { value, setValue, resetValue, restoreValue, applyValue } = useRestorableValue({
+  id: "account-values",
+  shouldRestoreOldValue: true,
+  initialValue: {
       accountName: "Hello",
       status: "World"
-    }
-  );
+  },
+});
 
   const onChange = (key) => (val) => {
     setValue((value) => ({ ...value, [key]: val }));
