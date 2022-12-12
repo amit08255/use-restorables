@@ -12,7 +12,7 @@ const useRestorableValue = ({ id, initialValue, shouldRestoreOldValue = true }:O
 
   // load initial value from window storage or by given value
   const loadInitialValue = () => {
-    const windowObj = window;
+    const windowObj:any = window;
 
     if (!windowObj.restorableValueStorage) {
       windowObj.restorableValueStorage = {};
@@ -33,7 +33,7 @@ const useRestorableValue = ({ id, initialValue, shouldRestoreOldValue = true }:O
 
   // Reset value to initial value
   const resetValue = () => {
-    const windowObj = window;
+    const windowObj:any = window;
 
     windowObj.restorableValueStorage[id] = initialValue;
     ref.current = initialValue;
@@ -48,7 +48,7 @@ const useRestorableValue = ({ id, initialValue, shouldRestoreOldValue = true }:O
 
   // Apply current value to state and storage
   const applyValue = (value) => {
-    const windowObj = window;
+    const windowObj:any = window;
 
     ref.current = value;
     windowObj.restorableValueStorage[id] = value;
