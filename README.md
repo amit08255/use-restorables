@@ -18,7 +18,7 @@ const { value, setValue, resetValue, restoreValue, applyValue } = useRestorableV
 ## Options
 
 * **id:** ID used to identify storage and keep values in memory.
-* **shouldRestoreOldValue:** When `true` it will restore initial values from memory otherwise the initial values will be set from option `initialValu:** Initial valuee`.
+* **shouldRestoreOldValue:** When `true` it will restore initial values from memory otherwise the initial values will be set from option `initialValue`.
 * **initialValue:** Initial value for setting in restorables.
 
 ## Return Value
