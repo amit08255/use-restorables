@@ -65,4 +65,14 @@ const useRestorableValue = ({ id, initialValue, shouldRestoreOldValue = true }:O
     };
 };
 
+const clearValue = (id:string) => {
+    const windowObj:any = window;
+
+    if (windowObj.restorableValueStorage) {
+        delete windowObj.restorableValueStorage[id];
+    }
+};
+
+useRestorableValue.clearValue = clearValue;
+
 export default useRestorableValue;
